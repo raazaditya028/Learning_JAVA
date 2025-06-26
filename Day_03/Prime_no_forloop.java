@@ -1,0 +1,22 @@
+package Day_03;
+import java.util.*;
+
+public class Prime_no_forloop {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a NUMBER: ");
+        int num = sc.nextInt();
+        int temp = 0;
+
+        for (int i = 2; i <= num - 1; i++) {
+            if (num % i == 0) {
+                System.out.println("Not a Prime Number");
+                temp = 1;
+                break;
+            }
+        }
+
+        if (temp == 0)
+            System.out.println("Prime Number");
+    }
+}
